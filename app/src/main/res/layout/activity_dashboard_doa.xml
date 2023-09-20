@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardDoaActivity">
+
+    <RelativeLayout
+        android:id="@+id/Relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:scaleType="centerCrop">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Doa dan
+            Dzikir App"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"
+
+            />
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo_doa"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="30dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Relative1"
+        >
+
+    <TextView
+        android:id="@+id/tvPilihan"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Pilihan Doa dan Dzikir"
+        android:textSize="30sp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginStart="20dp"
+        android:textColor="#F57C00"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSelengkapnya"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/tvPilihan"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selengkapnya"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            />
+        <ImageView
+            android:backgroundTint="@color/black"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_keyboard_arrow_right_24"
+            android:layout_marginStart="80dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Relative2">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDoaDzikir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
+    </ScrollView>
+
+</RelativeLayout>
